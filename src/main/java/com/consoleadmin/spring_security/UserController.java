@@ -1,5 +1,7 @@
 package com.consoleadmin.spring_security;
 
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,6 +18,12 @@ public class UserController {
         new User(2,"Harsh","CPP"),
         new User(1,"Shorya","Python")
     ));
+
+    // Add it at Header -> X-CRRF-TOKEN
+    @GetMapping("csrf-token")
+    public CsrfToken getCsrfToken(HttpServletRequest request) {
+        return (CsrfToken) request.getAttribute("_csrf");
+    }
 
     @GetMapping("users")
     public List<User> getUsers(){

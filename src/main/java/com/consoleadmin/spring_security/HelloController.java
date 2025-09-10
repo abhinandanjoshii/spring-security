@@ -10,7 +10,7 @@ public class HelloController {
     // CSRF : when someone steals my session from cookie : Spring Security Auto Handles
     // Cross Site Request Forgery
     // Spring Auto Creates CSRF for all POST, PUT, DELETE not on GET
-
+    // CSRF makes request Stateless to Stateful , carrying same Session forward.
     @GetMapping("hello")
     public String greet(HttpServletRequest request) {
         return "Hello World " + request.getSession().getId();

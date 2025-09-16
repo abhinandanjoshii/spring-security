@@ -1,5 +1,6 @@
-package com.consoleadmin.spring_security;
+package com.consoleadmin.spring_security.controller;
 
+import com.consoleadmin.spring_security.model.User;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.GetMapping;

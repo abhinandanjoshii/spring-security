@@ -1,4 +1,4 @@
-package com.consoleadmin.spring_security;
+package com.consoleadmin.spring_security.model;
 
 
 import lombok.AllArgsConstructor;

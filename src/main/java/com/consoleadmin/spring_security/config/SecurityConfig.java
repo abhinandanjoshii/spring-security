@@ -56,7 +56,7 @@ public class SecurityConfig {
 //        http.httpBasic(Customizer.withDefaults());
         // configure -> no same session continuation
         http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-        http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
+        http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
 
         return http.build();
